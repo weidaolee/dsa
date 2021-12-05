@@ -1,0 +1,51 @@
+* Spell
+1. 內層 index 絕對不會在已經有序的範圍 indexing
+2. 外層的 index 會決定內層的 index 範圍
+
+* Selection Sort
+S[0] ~ S[N] 中找最小，放在 0
+S[1] ~ S[N] 中找最小，放在 1
+S[2] ~ S[N] 中找最小，放在 2
+...
+S[i] ~ S[N] 中找最小，放在 i
+** Space
+int i, for i = 0 to N - 1
+int j, for j = i + 1 to N
+int min_idx, for recording the idx of arr[j : N]
+int tmp, for swapping
+* Insertion Sort
+使 0 ~ 0 位置上有序
+使 0 ~ 1 位置上有序：從 S[0:1] 替換所有比 S[1] 小的位
+使 0 ~ 2 位置上有序：從 S[0:2] 替換所有比 S[2] 小的位
+...
+使 0 ~ i 位置上有序：從 S[0:i] 替換所有比 S[i] 小的位
+** Space
+int i, for i = 1 to N
+int j, for i = 0 to i - 1
+int tmp, for swapping.
+
+* Bubble Sort
+j 從 N 到 1，替換所有 s[j - 1] 比 s[j] 小的位
+j 從 N 到 2，替換所有 s[j - 1] 比 s[j] 小的位
+...
+如果某一輪沒有發生 bubbling，排序結束
+** Space
+int i, for i = 1 to N
+int j, for j = N to i - 1
+boolean isOrdered, for recording if a bubbling process performed.
+int tmp, for swapping.
+
+* Merge Sort
+** Merge
+Purpose: 設左半邊 L ~ M-1 與右半邊 M ~ R 分別已經有序，使 L ~ R 有序。
+
+Method:
+使用 p0 與 p1 分別指向 s[L] 與 s[R]，並準備 R-L+1 大小的空間 s'
+
+loop:
+  比較 s[p0] s[p1]，假設 s[p0] < s[p1]，將 s[p0]塞入 s'，p0 指向下一位，
+  直到 p0 = M or p1 = R
+將剩下的數全部放入 s'
+** Space
+int [] s', for new space.
+int L, R, M, p0, p1, for indexes.

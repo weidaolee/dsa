@@ -1,4 +1,4 @@
-package heap;
+package sorting;
 
 public class MaxumHeap {
     int [] arr;

@@ -1,4 +1,4 @@
-package heap;
+package sorting;
 
 public class TestMaxumHeap {
     public static void main(String[] args) {

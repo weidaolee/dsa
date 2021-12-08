@@ -1,4 +1,4 @@
-package sorting;
+package sort.nlogn.merge;
 
 public class MergeSort {
     int [] arr;

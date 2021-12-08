@@ -1,4 +1,4 @@
-package sorting;
+package sort.nlogn.quick;
 
 public class QuickSort {
     int [] arr;

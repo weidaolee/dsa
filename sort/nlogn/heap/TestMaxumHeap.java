@@ -1,4 +1,4 @@
-package sorting;
+package sort.nlogn.heap;
 
 public class TestMaxumHeap {
     public static void main(String[] args) {

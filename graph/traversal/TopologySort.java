@@ -14,7 +14,7 @@ public class TopologySort {
 
       準備一個 map, 用於紀錄 Node -> In Degree
       準被一個 zero queue, 它只允許 in degree = 0 的 node 進入
-      每處理完一個 node,把 adjcents 的 indegree - 1
+      每處理完一個 node,把 adjacents 的 indegree - 1
     */
 
     public List<Node> topologySort (Graph graph) {

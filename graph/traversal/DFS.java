@@ -5,6 +5,12 @@ import java.util.HashSet;
 import java.util.Stack;
 
 public class DFS {
+    /**
+     * 1. 從 node v 開始，process v, 把 push v
+     * 2. pop v 從 v 的 adjacent node 挑一個沒處裡過的 node a 處裡
+     * 3. 把 v, a 照順序 push 回 stack
+     * 4. repeat 2 - 3，直到 stack empty
+     */
 
     public static void traversal(Node node) {
         if (node == null) {
@@ -18,9 +24,8 @@ public class DFS {
         set.add(node);
         stack.push(node);
 
-        Node v;
         while (!stack.isEmpty()) {
-            v = stack.pop();
+            Node v = stack.pop();
             for (Node a: v.ajcnt) {
                 if (!set.contains(a)) {
                     process(a); // 先處裡 a，並註冊

@@ -1,5 +1,5 @@
-package linkedlist;
-/*
+package linkedlist.singly;
+/**
   離開 while 前要檢查是否需要新增節點，因為進位可能會一直進位下去直到進位項確實 = 0
 
   special cases:

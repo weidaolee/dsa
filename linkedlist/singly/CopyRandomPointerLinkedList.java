@@ -1,4 +1,5 @@
-package linkedlist;
+package linkedlist.singly;
+
 import java.util.HashMap;
 
 public class CopyRandomPointerLinkedList {

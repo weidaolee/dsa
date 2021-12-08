@@ -1,4 +1,5 @@
-package tree;
+package tree.traversal;
+import tree.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,6 @@ public class InOrderTraversal {
         }
         recursion(node.left);
         list.add(node.val);
-        recursion(node.left);
+        recursion(node.right);
     }
 }

@@ -1,4 +1,5 @@
-package tree;
+package tree.basic;
+import tree.*;
 
 public class LowestCommonAncestor {
 

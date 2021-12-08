@@ -1,4 +1,5 @@
-package tree;
+package tree.basic;
+import tree.*;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,11 +21,8 @@ public class MaxWidth {
             if (node.left != null) {
                 queue.add(node.right);
             }
-
             maxWidth = maxWidth < queue.size() ? queue.size() : maxWidth;
         }
-
-
         return maxWidth;
     }
 }

@@ -3,7 +3,7 @@ package tree.dp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MaxHappyParty {
+public class HappiestParty {
     /**
      * Assignment:
      * 要舉辦一個最開心的派對，如果某員工參加，其直接下屬全部不參加。
@@ -14,7 +14,7 @@ public class MaxHappyParty {
      * 如果 root 不參加，考其直接下屬們參加 or 不參加的總快樂值:
      *     root 的總快樂值為 0 + 每個下屬 max {參加, 不參加}
      */
-    public int maxHappyParty (Emploee emploee) {
+    public int howHappy (Emploee emploee) {
         Info info = getInfo(emploee);
         return Math.max(info.showUp, info.noShow);
     }

@@ -1,6 +1,7 @@
+"""docstring: rename_package."""
+
 #!/usr/bin/env python
 
-import os
 import glob
 import argparse
 

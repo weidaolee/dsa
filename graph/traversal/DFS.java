@@ -26,7 +26,7 @@ public class DFS {
 
         while (!stack.isEmpty()) {
             Node v = stack.pop();
-            for (Node a: v.ajcnt) {
+            for (Node a: v.ajcns) {
                 if (!set.contains(a)) {
                     process(a); // 先處裡 a，並註冊
                     set.add(a);

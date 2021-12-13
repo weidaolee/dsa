@@ -8,14 +8,14 @@ public class Node {
     public int inDegree;
     public int outDegree;
 
-    public List <Node> ajcnt;
+    public List <Node> ajcns;
     public List <Edge> edges;
 
     public Node (int value) {
         this.value = value;
         inDegree = 0;
         outDegree = 0;
-        ajcnt = new ArrayList<>();
+        ajcns = new ArrayList<>();
         edges = new ArrayList<>();
     }
 }

@@ -37,7 +37,7 @@ public class TopologySort {
         while (!zeroInDegreeQueue.isEmpty()) {
             v = zeroInDegreeQueue.poll();
             res.add(v);
-            for (Node a : v.ajcnt) {
+            for (Node a : v.ajcns) {
                 inMap.put(a, inMap.get(a) - 1);
                 if (inMap.get(a) == 0) {
                     zeroInDegreeQueue.add(a);

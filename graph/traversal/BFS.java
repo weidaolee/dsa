@@ -26,7 +26,7 @@ public class BFS {
         while (!queue.isEmpty()) {
             Node v = queue.poll();
             process(v);
-            for (Node a : node.ajcnt) {
+            for (Node a : node.ajcns) {
                 if (!set.contains(a)) { // 如果訪問過了, 就不再訪問
                     queue.add(a);
                     set.add(a);

@@ -5,8 +5,8 @@ import java.util.Comparator;
 public class Edge {
     public Node from;
     public Node to;
-
     public int weight;
+
 
     public Edge (Node from, Node to, int weight) {
         this.from = from;
@@ -14,6 +14,12 @@ public class Edge {
 
         this.weight = weight;
     }
+    public Edge (Node from, Node to) {
+        this.from = from;
+        this.to = to;
+        this.weight = 0;
+    }
+
     public static class EdgeComparator implements Comparator<Edge> {
         @Override
         public int compare(Edge o1, Edge o2) {

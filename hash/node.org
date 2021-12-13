@@ -1,0 +1,48 @@
+* Hash Function
+1. Function H: (-inf, inf) -> S, where S is limited.
+2. Given String s, H (s) = H (s)
+3. Uniformity: for all s0 != s1,  prob (H (s0)) = prob (H(s1))
+**  e.g:
+  MD5: S = 0 - 2 ^ 64 - 1, S 被表示為 64 / 4 = 16 長度的 String, 每一個 char 佔 4 bits
+  SHA1: S = 0 - 2 ^ 128 - 1, S 被表示為 128 / 4 = 32 長度的 String, 每一個 char 佔 4 bits
+*In java, S = 0 - 2 ^ 32 - 1*
+** In Java
+ client 的 Hash table 是由 JVM 維護的，在 hash table 需要擴容時，可以離線擴容 (在額外的地方擴容，等擴容完成後切換到新的 fd)
+ 所以說，hash table 在 "使用階段" 增刪改查是 O(1)的，但理論上是 O(log N) 的。
+* Bloom Filter
+使用條件：
+1. 要實現類似黑名單系統
+2. 沒有刪除行為
+3. 樣本數量 N 可估計
+4. 允許存在失誤率 P
+
+參數決定：
+1. 開多大的 BitMap?
+   設 size of bitmap is m.
+
+   m = - (n * ln (p)) / (ln (2)) ^ 2
+
+   note. 數值會很大，可以以 G 表示
+
+2. 要取幾個 hash function ?
+   設 k 為理想的 hash function 數量，
+
+   k = ln (2) * (m / n) ~= 0.7 * (m/n)
+
+3. 如果有剩餘空間：
+   假設實際給我 m' 的空間
+
+   k' = ln (2) * (m' / n)
+   實際 p' = (1 - e (- (n * k' / m'))) ^ k'
+* Consistent Hashing
+一致性 Hash，用於多數據伺服器做 load balance
+1. 每台機器以 IP, MAC address, Host name 之類的做 hash，構成一個環
+2. 接下來，如果要存入新數據 data, 求出 H (data) 值，將 data 存入環上順時鐘的下一台機器上
+3. 如果加入一台新機器，加入後和它在環上的下一台機器要數據
+
+現在的問題是，機器數量少的時候，環上的機器並不等分整個環，
+所以，引入虛擬節點技術：
+*每台機器各自分配 k 個不同值的 String, 以 H (s) 來劃分環*
+*這樣環會被每台機器的虛擬節點等分，如果加入新機器，會均勻地向環上的虛擬節點要數據*
+*而虛擬節點會被均分到每一台機器上。*
+*並且，如果每台機器性能有差異，只須在分配虛擬節點時依照機器的性能比分配虛擬節點數量，就可以作到覆載均衡管理*

@@ -16,11 +16,26 @@
 3. 樣本數量 N 可估計
 4. 允許存在失誤率 P
 
+使用方法：
+1. 開一個 m 大小的 bitmap.
+2. 挑選 K 個 hash finction
+3. 當一筆 data 被列入黑名單：
+   for i = 1 to K:
+     取第 i 個 hash function, 求 Hash_i (data) = h_i,
+     將 bitmap 上第 h_i mod (k) 位標為 1
+4. 當一筆 data 到來，查詢是否被列入黑名單：
+   for i = 1 to K:
+     取第 i 個 hash function, 求 Hash_i (data) = h_i,
+     查看 bitmap [h_i mod (k)] == 1, 如果 i ~ k 中有 1 次
+     不為 1, 則 data 沒被加入過黑名單; 如果全部為 1, 代表有 (1-P)
+     的機率曾被加入黑名單。
+
 參數決定：
 1. 開多大的 BitMap?
    設 size of bitmap is m.
 
-   m = - (n * ln (p)) / (ln (2)) ^ 2
+   # m = - n * ln (p) / ln (2) ** 2
+   m = -n * log (e) * log (p)
 
    note. 數值會很大，可以以 G 表示
 
@@ -33,7 +48,8 @@
    假設實際給我 m' 的空間
 
    k' = ln (2) * (m' / n)
-   實際 p' = (1 - e (- (n * k' / m'))) ^ k'
+
+   實際 p' = (1 - e (- (n / m' * k'))) ^ k'
 * Consistent Hashing
 一致性 Hash，用於多數據伺服器做 load balance
 1. 每台機器以 IP, MAC address, Host name 之類的做 hash，構成一個環

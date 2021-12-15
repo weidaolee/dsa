@@ -1,0 +1,98 @@
+* Method
+** Hash 類
+1. Hash 分流:
+   透過 hash function 結合 mod operation 將數據均勻 分流到
+   k 個小文件中，再分批處理。
+
+   原理：
+   a. 利用了 hash function 的性質，if x = y -> h (x) = h (y), 所以會分配到相同小文件裡。
+   b. 利用了 hash function 的 uniformity, 每個小文件的數量是 uniform 的。
+2. 以一致性 Hashing 方法 (consistent hashing)
+   Load balanced problem of data servers:
+   以一致性 Hashing 方法 (consistent hashing), 配合虛擬節點技術解決。
+   [[file:~/projs/dsa/hash/note.org::*Consistent Hashing][實做方法請見 hash/note.org: Consistent Hashing]]
+** Bitmap 類
+1. Bitmap 壓縮空間
+2. Bloom Filter:
+   適用用於滿足以下情境:
+   a. *允許失誤率 p*
+   b. *實現類似 黑名單查詢系統*
+   c. *沒有刪除行為*
+   d. *樣本數 N 可以估計*
+   [[file:~/projs/dsa/hash/note.org::*Bloom Filter][實做方法請見 hash/note.org: Bloom Filter]]
+
+   決定 Bloom Filter 參數：
+   1. 決定開 M 大小的 Bitmap:
+      M = N * log (e) * log (1 / p)
+
+   2. 決定取 K 個 Hash function:
+      K = ln (2) * (M / N) ~= 0.69314 * (M / N)
+
+   3. 在這個基礎上，給真實的 M' 大小的空間，真實的 P'為：
+      K' = ln (2) * (M' / N),
+
+      P' = [1 - e (- lambda)] ^ K'
+
+      其中 lambda = (N / M) * K'
+
+
+** High Level Map & Reduce
+1. Union Find Set 做 map and reduce 基礎
+2. 分段統計
+3. 利用 Heap, 外排序來做多個 process units
+* Question
+1. 有一文件包含 40 億個無符號類型的字符，要求找出一個未出現過的數。
+   a. 以 Bitmap 壓縮空間：
+      以 bitmap 直接解，原文件所有字符的範圍是 0 ~ (2 ^ 32 - 1), bit arr space 2 ^ 32 / 8 = 2 ^ 29。出現過標 1, 沒出現過標 0。
+      time : O (N), 遍歷所有文件後，遍歷 bitmap 找 0。
+      space: O (N), 2 ^ 29 / 2 ^ 20 =  2 ^ 9 MB -> 相當於 512 MB。
+   b. 分段統計：
+      假設只能使用常數空間，最極端的情況。2 ^ 32 / 2 = 2 ^ 31
+      申請一個 arr = new uint [2],
+      其中 arr[0] 表示數據落入 range 0 - 2 ^ 31 - 1 的次數,
+      其中 arr[1] 表示數據落入 range 2 ^ 31 - 2 ^ 32 -1 的次數。
+      統計完後，arr[i] < 2 ^ 31 說明 range of arr[i] 有位出現過的數。
+      重複以上過程，定位到某一未出現過的數。
+      time : O (N log N), 每次統計遍歷 N 比數據，最多做 log N 次
+      space: O (1), total spent 8 Bytes
+2. 有一包含 100 億個 url 的文件，每個 url 不超過 64 B, 請找出所有重複的 url
+   a. Hash 分流，同樣的 url 會被分配到 相同的小文件
+   b. *若允許失誤率*，可使用 Bloom filter:
+      遇到第一次不重複的，加入黑名單，下次再出現，加入重複列表。最後 return 這個重複列表。
+
+3. 建立一個 Top 100 熱頻詞搜所系統:
+   先 Hash 分流到 K 個小文件中，對每個小文件做詞頻統計，然後對詞頻建立 Maxmum Heap,
+   這樣建立 K 個小 Heap, 然後再對 每個小 heap 的 head 建立一個 Maxmum Heap.
+   操作：
+   overall heap 的 head，假設它是來自第 K 個 heap，紀錄這個值，然後從 heap k pop,
+   得到更新後的第 k 個 heap 的 head, 設為 x, 把 x repalce overall 堆的 head, 向下 heapify.
+
+4. 有 40 億個無符號整數，如何使用最多 1G 的空間作到重複出現 2 次的數?
+   a. Hash 分流:
+      計算出 1G 可以處理多少個整數 K, 然後以 Hash
+   b. Bitmap:
+      如果只紀錄出現一次或以上，一個 bitmap 會消耗 512 MB.
+      申請兩個 512 MB 的 bitmap: b1[], b0[]
+      如果 b1[i] b2[i] 的值為:
+      0, 0 代表出現 0 次
+      0, 1 代表出現 1 次
+      1, 0 代表出現 2 次
+      1, 1 代表出現 2 次以上
+5. 使用 10 KB, 如何找到 40 億個數的中位數?
+   a. 分段统计法:
+      想法同 40 億個數找無重複的數。
+      1. 決定 arr 的 每一格的 range :
+         把 0 ~ 2 ^ 32 - 1 這個範圍分成 K 等份，
+         10 KB / 8 = 5 * 2 ^ (11 - 3) = 5 * 2 ^ 8 = 5 * 256, 要求是 2 的倍數，
+         所以取 4 * 256 = 1024, 到這裡,
+         arr[0] 代表範圍 0    ~ 1023
+         arr[1] 代表範圍 1024 ~ 2047
+         ...
+      2. 決定 arr 的 length:
+         2 ^ 32 / 2 ^ 10 = 2 ^ 22, arr.length 是 2 ^ 22
+      3. 分段統計完後，從 arr[0]開使往 arr[2 ^ 22] 累加，
+         假設累加到 arr[i - 1] 是 19 億 9 千萬，第 arr[i] 是 2 千萬，
+         說明 arr[i] 中包含中位數，arr [i] 的 range 是 1024，
+         這時候只統計 arr[i] 所代表的數，因為只有 1024 個數，
+         直接詳細統計即可。
+      4. 第二次分段統計完後，一樣繼續累加，直到累加到第 20 億個數出現。

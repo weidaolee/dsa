@@ -1,0 +1,5 @@
+* Steps
+1. Find brute force recursive method
+2. Memory search method
+3. Strict table method
+4. Refined strict table method

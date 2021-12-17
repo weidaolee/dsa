@@ -1,5 +1,3 @@
-"""docstring: rename_package."""
-
 #!/usr/bin/env python
 
 import glob
@@ -13,7 +11,7 @@ def parse():
     return parser.parse_args()
 
 def rename_packege(args):
-    file_list = glob.glob("./**/*.java")
+    file_list = glob.glob("./**/*.java", recursive=True)
     for s in file_list:
         with open(s, "r") as f:
             code = f.readlines()

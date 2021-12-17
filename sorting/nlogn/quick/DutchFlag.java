@@ -1,4 +1,4 @@
-package sort.nlogn.quick;
+package sorting.nlogn.quick;
 
 public class DutchFlag {
     int [] arr;

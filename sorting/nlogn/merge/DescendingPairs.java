@@ -1,4 +1,4 @@
-package sort.nlogn.merge;
+package sorting.nlogn.merge;
 
 public class DescendingPairs {
     int [] arr;

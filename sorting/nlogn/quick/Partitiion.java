@@ -1,4 +1,4 @@
-package sort.nlogn.quick;
+package sorting.nlogn.quick;
 
 /*
   i 往前走，比較 arr[i] 和 target

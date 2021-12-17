@@ -1,4 +1,4 @@
-package sort.square;
+package sorting.square;
 
 public class SelectionSort {
 	 int[] arr;

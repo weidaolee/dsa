@@ -1,4 +1,4 @@
-package sort.nlogn.heap;
+package sorting.nlogn.heap;
 
 public class MaxumHeap {
     int [] arr;

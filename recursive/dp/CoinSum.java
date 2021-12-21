@@ -1,4 +1,4 @@
-package dp;
+package recursive.dp;
 
 public class CoinSum {
 

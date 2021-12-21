@@ -1,4 +1,4 @@
-package tree.dp;
+package recursive.dp;
 
 import tree.TreeNode;
 

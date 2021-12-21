@@ -1,4 +1,4 @@
-package recursion;
+package recursive;
 
 public class NumIslands {
     /**

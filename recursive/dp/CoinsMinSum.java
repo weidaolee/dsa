@@ -1,4 +1,4 @@
-package dp;
+package recursive.dp;
 
 public class CoinsMinSum {
     public static int brute (int pickup, int rest, int [] arr) {

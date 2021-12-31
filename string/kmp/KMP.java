@@ -2,70 +2,101 @@ package string.kmp;
 
 public class KMP {
 
-    public static int getSubStringIndex (String s, String m) {
-        /**
-         * s1 和 s2 一路比對到不相同，s1 原地不動，s2 去 next arr 找下一個可能不同的
-         * 位置繼續比對，有兩種可能:
-         *   1. 全都不同，沒得比 (next[i2] = -1)
-         *   2. 有可能有相同，i2 移動到 next[i2]
-         */
-
+    public static int getSubstringIndex (String s, String m) {
         if (s == null || m == null || m.length() < 1 || s.length() < m.length()) {
             return -1;
         }
+        char[] ch1 = s.toCharArray();
+        char[] ch2 = m.toCharArray();
 
-        char [] s1 = s.toCharArray();
-        char [] s2 = m.toCharArray();
+        int [] maxSameLengthTable = getMaxSameLengthTable(ch2);
 
-        int [] next = getNextArray(s2);
+        int L = 0;   // long string index
+        int S = 0;   // short string index
 
-        int i1 = 0;
-        int i2 = 0;
-
-        while (i1 < s1.length && i2 < s2.length) {
-            if (s1[i1] == s2[i2]) {
-                i1 ++;
-                i2 ++;
-            } else if (next[i2] == -1) {
-                i1 ++;
+        while (L < ch1.length && S < ch2.length) {
+            if (ch1[L] == ch2[S]) {
+                L ++;
+                S ++;
+                // 一路比對都相同, 我們有
+                // ch1 [L - S...L] = ch2 [0...S]
+            } else if (S > 0) {
+                // ch1[L] 和 ch2[S] 不相同，
+                // 理論上 ch1 要回到 ch1[L - S + 1], ch2 要回到 ch2[0] 繼續比。
+                //
+                // 但因為上一個 if, 我們沿路比較了 S 次, 前面 S - 1 次都相同,
+                // 所以我們有：
+                //
+                // ch1[L - S ...L - 1] = ch2[0...S - 1]
+                //
+                // 我們透過 maxSameLengthTable T, T[S] = x
+                //
+                // 而 x <= S 的, 所以 L - 1 往前推 x 位, 跟 S - 1 往前推 x 位
+                // 是相同的，所以我們有：
+                //
+                // (1) ch1[L - x ...L - 1] = ch2[S - x...S - 1]
+                //
+                // 根據 maxSameLengthTable 的定義 (記為 T)，
+                // T[S] = x, 代表第 S 位置以前有 x 個和最前端相同 (不包含 S)，
+                // 所以我們有：
+                //
+                // (2) ch2[0...x - 1] = ch2[S - x...S - 1],
+                //
+                // 結合 (1), (2), ch2 前端有 x 個和 ch1 的末端相同：
+                //
+                // ch1[L - x ... L - 1] = ch2[0...x - 1]
+                //
+                // 這相當於 ch1 和 ch2 已經經歷過 x 次比較都相同,
+                //
+                // 所以令 S = x, S 直接到 x 位置，跟 ch1[L] 比,
+                S = maxSameLengthTable[S];
             } else {
-                i2 = next[i2];
+                // S 已經來到 0 位置，代表從 ch1[L - S...L] 和 整個 ch2 不相同
+                // L 往下一位和 ch2[0] 開始繼續比
+                L ++;
             }
         }
-        return i2 == s2.length ? i1 - i2 : -1;
+
+        return S == ch2.length ? L - S : -1;
     }
 
-
-    public static int[] getNextArray (char [] s) {
-       /**
-        * next arr 滿足其第 i 位以前，有幾個頭尾相同的位數:
-        * e.g:
-        * input: [ 1, 2, 3, 4, 5, 1, 2, 3, 5]
-        * next : [-1, 0, 0, 0, 0, 0, 1, 2, ]
-        */
-        if (s.length == 1) {
-            return new int [] { -1 };
+   /**
+    * maxSameLenghtTable = T []
+    * T[i] = x, 滿足 s[0...x - 1] = s[i - x...i - 1]
+    * 代表 第 i 個位置前面有 x 個和最前面是一樣的
+    */
+    public static int[] getMaxSameLengthTable (char[] chs) {
+        if (chs.length == 1) {
+            return new int[] { -1 };
         }
 
-        int [] next = new int [s.length];
-        next[0] = -1;
-        next[1] = 0;
+        int[] maxSameLengthTable =  new int[chs.length];
+        maxSameLengthTable[0] = -1;
+        maxSameLengthTable[1] = 0;
 
-        int curNext = 0;
         int i = 2;
+        int len = 0;
 
-        while (i < s.length) {
-            if (s[i - 1] == s[curNext]) {
-                next[i ++] = ++ curNext;
-            } else if (curNext > 0) {
-                // 代表前面還有可能相同，可能可以往前推
-                curNext = next[curNext];
+        while (i < chs.length) {
+            // len 既是到 i - 1 位置以前的最長相同字串長度
+            // 也是 chs 中的第 x 位置
+            if (chs[i - 1] == chs[len]) {              // table[i] 要填 s[0...i-1] 的資訊
+                maxSameLengthTable[i] = len + 1;
+                i ++;
+                len ++;
+            } else if (len > 0) {
+                len = maxSameLengthTable[len];
             } else {
-                // 代表沒有任何一個相同
-                next[i ++] = 0;
+                maxSameLengthTable[i] = 0;
+                i ++;
             }
         }
 
-        return next;
+        return maxSameLengthTable;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(KMP.getSubstringIndex("0123456789", "9"));
+        System.out.println(KMP.getSubstringIndex("abcabcabcabc", "abcaa"));
     }
 }

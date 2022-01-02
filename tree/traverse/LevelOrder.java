@@ -1,4 +1,4 @@
-package tree.traversal;
+package tree.traverse;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

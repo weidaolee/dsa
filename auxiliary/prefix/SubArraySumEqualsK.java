@@ -1,4 +1,4 @@
-package auxiliary.prefixsum;
+package auxiliary.prefix;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ public class SubArraySumEqualsK {
 
     /**
      * Main idea:
-     * i = 1 到 N, 找以 i 為起點, j 為中點的所有可能 nums[i,...j],
+     * i = 1 到 N, 找以 i 為起點, j 為終點的所有可能 nums[i,...j],
      * j 在遍歷時順便累加 sum, 使得 當 sum == k 時, 不必再遍歷第三次
      */
     public int subarraySum() {
@@ -36,7 +36,6 @@ public class SubArraySumEqualsK {
         }
         return ans;
     }
-
 
    /**
     * Main idea:

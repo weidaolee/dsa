@@ -1,4 +1,4 @@
-package auxiliary.prefixsum;
+package auxiliary.prefix;
 
 import java.util.HashMap;
 import java.util.Map;

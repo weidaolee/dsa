@@ -1,0 +1,44 @@
+* Roadmap
++ array
+  + traverse
++ linkedlist
+  + singly
++ stack
+  + design
+  + monotonic
++ heap
+  + app
+  + design
++ tree
+  + traverse
+  + dp
+  + trie
++ auxiliary
+  + accumulate
+  + prefixsum
++ graph
+  + traverse
+  + shortestpath
+  + minispanningtree
++ hash
++ recursive
+  + classic
+  + left2right
+  + divideconquer
+  + dp
+  + backtrack
++ slidingwindow
++ string
+  + kmp
+  + manacher
+  + parentheses
+  + match
+  + dict
++ sorting
+  + nsquare
+  + nlogn
+  + linear
++ pattern
++ unionfindset
++ bigdata
++ bitoperation

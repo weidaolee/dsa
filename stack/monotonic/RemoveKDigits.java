@@ -1,4 +1,4 @@
-package stack.monotonestack;
+package stack.monotonic;
 
 
 public class RemoveKDigits {

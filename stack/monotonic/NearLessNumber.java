@@ -1,4 +1,4 @@
-package monotonestack;
+package stack.monotonic;
 import java.util.Stack;
 
 public class NearLessNumber {

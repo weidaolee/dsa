@@ -1,4 +1,4 @@
-package graph.traversal;
+package graph.traverse;
 import graph.*;
 
 import java.util.ArrayList;

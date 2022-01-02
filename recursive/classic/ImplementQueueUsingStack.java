@@ -1,4 +1,4 @@
-package recursive;
+package recursive.classic;
 
 import java.util.Stack;
 

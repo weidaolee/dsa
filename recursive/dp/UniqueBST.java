@@ -1,6 +1,6 @@
 package recursive.dp;
 
-public class UniqueBstI {
+public class UniqueBST {
     public int numTrees(int n) {
         return dp(n);
     }

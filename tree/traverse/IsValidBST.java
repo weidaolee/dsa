@@ -14,7 +14,7 @@ public class IsValidBST {
     long preValue = Long.MIN_VALUE;
     public boolean recursiveInorderValidateBST (TreeNode root) {
         /**
-         BST in-order 必須是嚴格生序
+         BST in-order 必須是嚴格升序
          在 in-order 處裡時紀錄當前 node, 在 recursion 才可以進行比較
          */
         if (root == null) {

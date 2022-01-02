@@ -1,4 +1,4 @@
-package matrix;
+package array.traverse;
 
 import java.util.ArrayList;
 import java.util.List;

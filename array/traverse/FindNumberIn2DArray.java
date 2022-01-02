@@ -1,4 +1,4 @@
-package matrix;
+package array.traverse;
 
 
 public class FindNumberIn2DArray {

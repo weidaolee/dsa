@@ -8,17 +8,17 @@ public class MergeSort {
 	}
 
 	public void sort() {
-        recursion(0, arr.length - 1);
+        sort(0, arr.length - 1);
 	}
 
-    private void recursion(int L, int R) {
+    private void sort(int L, int R) {
         if (L == R) {
             return;
         }
-        int mid = L + (int) ((R - L) / 2);
-        recursion(L, mid);
-        recursion(mid + 1, R);
-        merge(L, mid, R);
+        int M = L + (int) ((R - L) / 2);
+        sort(L, M);
+        sort(M + 1, R);
+        merge(L, M, R);
     }
 
     private void merge(int L, int M, int R) {

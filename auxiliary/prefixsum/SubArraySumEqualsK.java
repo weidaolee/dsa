@@ -9,7 +9,7 @@ public class SubArraySumEqualsK {
     public int subarraySum(int[] nums, int k) {
         init(nums, k);
 
-        return prefix();
+        return prefixSum();
     }
 
     private void init(int[] nums, int k) {

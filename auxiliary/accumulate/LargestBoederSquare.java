@@ -1,4 +1,4 @@
-package preprocess;
+package auxiliary.accumulate;
 
 public class LargestBoederSquare {
     /**

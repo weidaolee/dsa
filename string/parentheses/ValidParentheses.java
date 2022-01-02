@@ -1,4 +1,4 @@
-package parentheses;
+package string.parentheses;
 
 import java.util.Map;
 import java.util.HashMap;

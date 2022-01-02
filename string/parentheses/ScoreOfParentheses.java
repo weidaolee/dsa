@@ -1,4 +1,4 @@
-package parentheses;
+package string.parentheses;
 
 
 public class ScoreOfParentheses {

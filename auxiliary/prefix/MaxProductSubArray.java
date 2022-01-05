@@ -3,8 +3,10 @@ package auxiliary.prefix;
 
 public class MaxProductSubArray {
     /**
-     * Main idea:
+     * Link:
+     * https://leetcode-cn.com/problems/continuous-subarray-sum/
      *
+     * Main idea:
      * 先考慮 A [0..N-1] 不包含 0:
      * 1. 假設 A[0..N-1] 有偶數個負數, max product = P[N-1]
      * 2. 假設 A[0..N-1] 有奇數個負數,

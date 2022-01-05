@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ContinuousSubarraySum {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/continuous-subarray-sum/
+     *
+     */
+
     int[] nums;
     int k;
     public boolean checkSubarraySum(int[] nums, int k) {

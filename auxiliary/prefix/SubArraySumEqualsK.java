@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SubArraySumEqualsK {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/continuous-subarray-sum/
+     *
+     * Main idea:
+     * i = 1 到 N, 找以 i 為起點, j 為終點的所有可能 nums[i,...j],
+     * j 在遍歷時順便累加 sum, 使得 當 sum == k 時, 不必再遍歷第三次
+     */
     int[] nums;
     int k;
     public int subarraySum(int[] nums, int k) {
@@ -17,11 +25,6 @@ public class SubArraySumEqualsK {
         this.k = k;
     }
 
-    /**
-     * Main idea:
-     * i = 1 到 N, 找以 i 為起點, j 為終點的所有可能 nums[i,...j],
-     * j 在遍歷時順便累加 sum, 使得 當 sum == k 時, 不必再遍歷第三次
-     */
     public int subarraySum() {
         int ans = 0;
         for (int i = 0; i < nums.length; i++) {

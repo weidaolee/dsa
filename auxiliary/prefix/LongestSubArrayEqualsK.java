@@ -5,6 +5,10 @@ import java.util.Map;
 
 public class LongestSubArrayEqualsK {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/continuous-subarray-sum/
+     *
+     * Main idea:
      * 更新當前 map 的邏輯:
      *    要將當前 preSum 放進 map 中, 有兩種可能:
      *    a. 以前曾經出現過當前 preSum 的值

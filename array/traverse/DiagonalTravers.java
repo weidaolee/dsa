@@ -1,6 +1,12 @@
 package array.traverse;
 
 public class DiagonalTravers {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/diagonal-traverse/
+     *
+     */
+
     int [][] mat;
     int [] ans;
     int m;

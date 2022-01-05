@@ -2,6 +2,9 @@ package auxiliary.accumulate;
 
 public class LargestBoederSquare {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/largest-1-bordered-square/
+     *
      * Main idea:
      * 先分析複雜度:
      *   1. 矩陣大小 N X N, 最多可以組成多少個矩形 ?

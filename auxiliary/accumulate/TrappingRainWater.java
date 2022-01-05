@@ -3,6 +3,9 @@ package auxiliary.accumulate;
 
 public class TrappingRainWater {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/trapping-rain-water/
+     *
      * Main idea:
      * 來到第 i 位置,
      *   求 0 ~ i - 1 位置的最大值 Lmax,

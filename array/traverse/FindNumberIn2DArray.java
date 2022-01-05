@@ -2,6 +2,12 @@ package array.traverse;
 
 
 public class FindNumberIn2DArray {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/
+     *
+     */
+
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0 && matrix[0].length == 0) {
             return false;

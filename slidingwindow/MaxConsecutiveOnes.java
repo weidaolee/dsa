@@ -2,6 +2,11 @@ package slidingwindow;
 
 public class MaxConsecutiveOnes {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/max-consecutive-ones-ii/
+     *
+     * Main idea:
+     *
      * R 如果壓中 0, 如果窗口內 0 的數量為 0:
      *   1. 紀錄 0 的位置
      *   2. 窗口內 0 的數量 + 1

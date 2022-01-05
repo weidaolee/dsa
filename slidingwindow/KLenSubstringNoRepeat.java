@@ -2,6 +2,11 @@ package slidingwindow;
 
 
 public class KLenSubstringNoRepeat {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/find-k-length-substrings-with-no-repeated-characters/
+     *
+     */
     public int numKLenSubstrNoRepeats(String s, int k) {
         if (s.length() < k) {
             return 0;

@@ -3,6 +3,9 @@ package slidingwindow;
 
 public class MaxScore {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/
+     *
      * Main idea:
      * 如果可以拿 k 次，說明中間會有 len - k 個不拿，
      * 維護一個 sliding window, 求 L ~ R 總和最小

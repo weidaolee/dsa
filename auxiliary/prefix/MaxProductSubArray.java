@@ -4,7 +4,7 @@ package auxiliary.prefix;
 public class MaxProductSubArray {
     /**
      * Link:
-     * https://leetcode-cn.com/problems/continuous-subarray-sum/
+     * https://leetcode-cn.com/problems/maximum-product-subarray/
      *
      * Main idea:
      * 先考慮 A [0..N-1] 不包含 0:

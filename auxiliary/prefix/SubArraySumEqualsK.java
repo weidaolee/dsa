@@ -6,7 +6,7 @@ import java.util.Map;
 public class SubArraySumEqualsK {
     /**
      * Link:
-     * https://leetcode-cn.com/problems/continuous-subarray-sum/
+     * https://leetcode-cn.com/problems/subarray-sum-equals-k/
      *
      * Main idea:
      * i = 1 到 N, 找以 i 為起點, j 為終點的所有可能 nums[i,...j],

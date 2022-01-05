@@ -6,7 +6,7 @@ import java.util.Map;
 public class LongestSubArrayEqualsK {
     /**
      * Link:
-     * https://leetcode-cn.com/problems/continuous-subarray-sum/
+     * https://leetcode-cn.com/problems/maximum-size-subarray-sum-equals-k/
      *
      * Main idea:
      * 更新當前 map 的邏輯:

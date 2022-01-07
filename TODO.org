@@ -1,6 +1,15 @@
+* dp
+TODO https://leetcode-cn.com/problems/delete-and-earn/
+TODO https://leetcode-cn.com/problems/can-i-win/
+
+* prefix
+https://leetcode-cn.com/problems/maximum-length-of-subarray-with-positive-product/
+https://leetcode-cn.com/problems/maximum-sum-circular-subarray/
+
 * heap
-TODO https://leetcode-cn.com/problems/sort-an-array/
 TODO real time sort
+TODO https://leetcode-cn.com/problems/find-median-from-data-stream/
+TODO https://leetcode-cn.com/problems/sliding-window-median/
 
 * trie
 TODO https://leetcode-cn.com/problems/concatenated-words/
@@ -11,9 +20,6 @@ TODO https://leetcode-cn.com/problems/palindromic-substrings/
 
 * slidingwindow
 https://leetcode-cn.com/problems/sliding-window-maximum/
-
-* dp
-TODO https://leetcode-cn.com/problems/can-i-win/
 
 * backtrack
 

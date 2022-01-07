@@ -2,7 +2,7 @@ package recursive.dp;
 
 import java.util.Arrays;
 
-public class CoinChange {
+public class CoinChangeI {
     /**
      * Link:
      * https://leetcode-cn.com/problems/coin-change/

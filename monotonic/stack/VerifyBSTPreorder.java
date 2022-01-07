@@ -4,7 +4,10 @@ import java.util.Stack;
 
 public class VerifyBSTPreorder {
    /**
-    * BST in-order 會滿足 L < D < R，整個序列遞增
+    * Link:
+    * https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree/BST in-order 會滿足 L < D < R，整個序列遞增
+    *
+    * Main idea:
     * BST pre-order 會滿足 D > L < R，所以該序列：
     * 1. 在左樹上，會遞減
     * 2. 遇到一個非遞減的 node ，說明來到 D，但接下來的 node 必須比 D 大
@@ -26,7 +29,7 @@ public class VerifyBSTPreorder {
         }
         return true;
     }
-    public boolean verifyPreorderArrayStack (int [] preorder) {
+    private boolean verifyPreorderArrayStack (int [] preorder) {
         int [] stack = new int [preorder.length];
         int min = Integer.MIN_VALUE;
         int top = -1;

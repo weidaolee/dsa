@@ -1,0 +1,21 @@
+* heap
+TODO https://leetcode-cn.com/problems/sort-an-array/
+TODO real time sort
+
+* trie
+TODO https://leetcode-cn.com/problems/concatenated-words/
+
+* string
+TODO https://leetcode-cn.com/problems/longest-palindromic-substring/
+TODO https://leetcode-cn.com/problems/palindromic-substrings/
+
+* slidingwindow
+https://leetcode-cn.com/problems/sliding-window-maximum/
+
+* dp
+TODO https://leetcode-cn.com/problems/can-i-win/
+
+* backtrack
+
+* tree
+TODO https://leetcode-cn.com/problems/longest-univalue-path/

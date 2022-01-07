@@ -1,0 +1,11 @@
+* Operations
+1. left = 2i + 1
+2. right = left + 1
+3. parent = (i - 1) / 2
+4. insert: 上浮
+5. heapfy: 下沉
+
+* Sort
+1. 把整個 array 排成 maxheap:
+   從 i = arr.length - 1 開始 heapify(i) , 直到 i = 0
+2. swap (0, tail --), 然後 heapify(0), 直到 tail = 0

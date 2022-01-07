@@ -1,16 +1,20 @@
 package recursive.dp;
 
-public class UniqueBST {
-    public int numTrees(int n) {
-        return dp(n);
-    }
-
+public class UniqueBSTI {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/unique-binary-search-trees/
+     *
+     * Main idea:
      * 對於每一個 node, 輪流當 root:
      * 左有 0 ~ N - 1 個 node, 右有 N - 1 ~ 0 個 node
      * 又每個 node 的 val 不相同，因此該 root 的所有可能為 左邊所有的可能性 * 右邊所有的可能性
      * 累加每個 node 輪流當 root 的情況，即是所有的可能性
      */
+    public int numTrees(int n) {
+        return dp(n);
+    }
+
     public int numBSTs(int n) {
         if (n < 0) {
             return 0;

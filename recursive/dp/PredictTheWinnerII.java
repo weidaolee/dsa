@@ -1,6 +1,12 @@
 package recursive.dp;
 
 public class PredictTheWinnerII {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/predict-the-winner/
+     *
+     */
+
     int[] nums;
     int n;
     public boolean PredictTheWinner(int[] nums) {

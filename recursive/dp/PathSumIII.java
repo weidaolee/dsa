@@ -2,13 +2,19 @@ package recursive.dp;
 
 import tree.TreeNode;
 
-public class PathSum {
+public class PathSumIII {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/path-sum-iii/
+     *
+     */
+
     public int pathSum(TreeNode root, int targetSum) {
         /**
          * Main idea:
          * 已經有求以 root 為起點的合法路徑數
          * 考慮跳過 root, 直接考慮 root.left, root.right 的合法路徑長
-         * 全部加總就微微答案
+         * 全部加總就是答案
          *
          * time : O (N ^ 2)
          * space: O (N)

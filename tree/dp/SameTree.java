@@ -2,12 +2,17 @@ package tree.dp;
 import tree.*;
 
 
-public class IsSameTree {
+public class SameTree {
+    /**
+     *Link:
+     * https://leetcode-cn.com/problems/same-tree/
+     *
+     */
     public boolean isSameTree(TreeNode p, TreeNode q) {
         return recursion(p, q);
     }
 
-    public boolean recursion (TreeNode p, TreeNode q) {
+    private boolean recursion (TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
         }

@@ -2,8 +2,12 @@ package tree.dp;
 
 import tree.TreeNode;
 
-public class LongestConsecutive {
-
+public class BinaryTreeLongestConsecutiveSequence {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/binary-tree-longest-consecutive-sequence/
+     *
+     */
     int maxLength = 1;
     public int longestConsecutive(TreeNode root) {
         if (root == null) {
@@ -13,7 +17,7 @@ public class LongestConsecutive {
         return maxLength;
     }
 
-    public int bottomupCumLength (TreeNode node) {
+    private int bottomupCumLength (TreeNode node) {
         if (node == null) {
             return 0;
         }
@@ -40,7 +44,7 @@ public class LongestConsecutive {
         return curLength;
     }
 
-    public void topdown (TreeNode root, TreeNode parent, int curLength) {
+    private void topdown (TreeNode root, TreeNode parent, int curLength) {
         /**
          * 這題是從 root 開始到 leaves 結束，以 dfs 視角看待
          * 從 root 開始，如果自己是 root, 則 current length 是 1, 更新 max length，

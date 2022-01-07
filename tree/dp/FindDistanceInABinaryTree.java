@@ -1,8 +1,11 @@
 package tree.dp;
 import tree.TreeNode;
 
-public class FindDistance {
+public class FindDistanceInABinaryTree {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/find-distance-in-a-binary-tree/
+     *
      * Main idea:
      * 1. 先找到 lowest common ancenstor
      * 2. 以 lca 為 root, 計算 p, q 距離
@@ -57,7 +60,7 @@ public class FindDistance {
         return getInfo(root, p, q).edges;
     }
 
-    public TreeNode getLowestAncenstor(TreeNode root, int p, int q) {
+    private TreeNode getLowestAncenstor(TreeNode root, int p, int q) {
         if (root == null || root.val == p || root.val == q) {
             return root;
         }
@@ -70,7 +73,7 @@ public class FindDistance {
         return left != null ? left : right;
     }
 
-    public Info getInfo (TreeNode root, int p, int q) {
+    private Info getInfo (TreeNode root, int p, int q) {
         if (root == null) {
             return new Info(0, 0);
         }

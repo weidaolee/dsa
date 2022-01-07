@@ -2,11 +2,16 @@ package tree.dp;
 import tree.*;
 
 public class MaxDepth {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
+     *
+     */
     public int maxDepth(TreeNode root) {
         return recursion(root);
     }
 
-    public int recursion (TreeNode node) {
+    private int recursion (TreeNode node) {
         if (node == null) {
             return 0;
         }

@@ -2,9 +2,11 @@ package tree.dp;
 
 import tree.TreeNode;
 
-public class FindTilt {
+public class BinaryTreeTilt {
     /**
-       遞迴累加所有的 node val, 且每個 node 更新全局的 tilt 加總
+     * Link:
+     * https://leetcode-cn.com/problems/binary-tree-tilt/
+     *
      */
 
     int totalTilt = 0;
@@ -17,7 +19,7 @@ public class FindTilt {
         return totalTilt;
     }
 
-    public int bottomupCumNodeValue (TreeNode root) {
+    private int bottomupCumNodeValue (TreeNode root) {
         if (root == null) {
             return 0;
         }

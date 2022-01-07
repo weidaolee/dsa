@@ -2,14 +2,19 @@ package tree.dp;
 
 import tree.TreeNode;
 
-public class LargestBSTSubtree {
+public class MaxSumSubBSTInBinaryTree {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/maximum-sum-bst-in-binary-tree/
+     *
+     */
     public int largestBSTSubtree (TreeNode root) {
 
         Info info = getInfo(root);
         return info.largestSubBSTSize;
     }
 
-    public Info getInfo (TreeNode root) {
+    private Info getInfo (TreeNode root) {
         if (root == null) {
             return new Info(true, 0, Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
         }

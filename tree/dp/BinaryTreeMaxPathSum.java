@@ -1,7 +1,20 @@
 package tree.dp;
 import tree.TreeNode;
 
-public class MaxPathSum {
+public class BinaryTreeMaxPathSum {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/
+     *
+     * 總和交給全局變量
+     * 遞迴只計算最大路徑合:
+     *
+     * 必經過 root 的最大路徑合為:
+     * 1. root.val + 左樹的最大路徑合取正 + 右樹的最大路徑合取正
+     * 2. update maxSum
+     * 3. return 中止在此 root 的最佳路徑
+     */
+
     public int maxPathSum(TreeNode root) {
         if (root.left == null && root.right == null) {
             return root.val;
@@ -11,17 +24,7 @@ public class MaxPathSum {
     }
 
     int maxSum = Integer.MIN_VALUE;
-    public int getPathMaxSum (TreeNode root) {
-        /**
-         * 總和交給全局變量
-         * 遞迴只計算最大路徑合:
-         *
-         * 必經過 root 的最大路徑合為:
-         * 1. root.val + 左樹的最大路徑合取正 + 右樹的最大路徑合取正
-         * 2. update maxSum
-         * 3. return 中止在此 root 的最佳路徑
-         */
-
+    private int getPathMaxSum (TreeNode root) {
         if (root == null) {
             return 0;
         }

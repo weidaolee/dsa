@@ -8,7 +8,7 @@ public class HappiestParty {
      * Assignment:
      * 要舉辦一個最開心的派對，如果某員工參加，其直接下屬全部不參加。
      *
-     * Analyze:
+     * Main idea:
      * 如果 root 參加，考慮其直接下屬們都不參加的總快樂值:
      *     root 的總快樂值為 root 自己的快樂值 + 下屬們都不參加的總快樂值
      * 如果 root 不參加，考其直接下屬們參加 or 不參加的總快樂值:
@@ -19,7 +19,7 @@ public class HappiestParty {
         return Math.max(info.showUp, info.noShow);
     }
 
-    public static class Emploee {
+    private static class Emploee {
         int happy;
         List <Emploee> subornates;
 
@@ -29,7 +29,7 @@ public class HappiestParty {
 		}
     }
 
-    public Info getInfo (Emploee emploee) {
+    private Info getInfo (Emploee emploee) {
         if (emploee.subornates == null) {
             return new Info(emploee.happy, 0);
         }
@@ -48,7 +48,7 @@ public class HappiestParty {
         return new Info (showUp, noShow);
     }
 
-    public static class Info {
+    private static class Info {
         int showUp;
         int noShow;
 		public Info(int showUp, int noShow) {

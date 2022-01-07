@@ -12,7 +12,7 @@ public class RightSideView {
     }
 
     List <Integer> path = new LinkedList<>();
-    public void dfs (TreeNode root, int depth) {
+    private void dfs (TreeNode root, int depth) {
         if (root == null) {
             return;
         }
@@ -23,7 +23,7 @@ public class RightSideView {
         dfs(root.left, depth + 1);
     }
 
-    public List <Integer> dp (TreeNode root) {
+    private List <Integer> dp (TreeNode root) {
         if (root == null) {
             return new LinkedList<>();
         }

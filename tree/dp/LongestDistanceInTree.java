@@ -4,7 +4,7 @@ import tree.TreeNode;
 public class LongestDistanceInTree {
     /**
      * Assignment:
-     * 求出 tree 中 node 與 node 之間最常距離 \n
+     * 求出 tree 中 node 與 node 之間最長距離
      *
      * Idea:
      *    1. root 在 longest path 上：
@@ -17,7 +17,7 @@ public class LongestDistanceInTree {
     }
 
 
-    public static class Info {
+    private static class Info {
         int distance;
         int height;
 
@@ -27,7 +27,7 @@ public class LongestDistanceInTree {
 		}
     }
 
-    public Info getInfo (TreeNode root) {
+    private Info getInfo (TreeNode root) {
        if (root == null) {
            return new Info(0, 0);
        }

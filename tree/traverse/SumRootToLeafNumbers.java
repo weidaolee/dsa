@@ -3,7 +3,12 @@ package tree.traverse;
 import tree.TreeNode;
 
 
-public class SumNumbers {
+public class SumRootToLeafNumbers {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/
+     *
+     */
     public int sumNumbers(TreeNode root) {
         if (root == null) {
             return 0;
@@ -14,7 +19,7 @@ public class SumNumbers {
     }
 
     int sum = 0;
-    public void dfs (TreeNode root, int digit) {
+    private void dfs (TreeNode root, int digit) {
         if (root == null) {
             return;
         }

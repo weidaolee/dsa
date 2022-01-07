@@ -7,6 +7,11 @@ import java.util.List;
 import tree.TreeNode;
 
 public class Codec {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/
+     *
+     */
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         if (root == null) {
@@ -17,7 +22,7 @@ public class Codec {
         return data.toString();
     }
 
-    public StringBuilder serialize(TreeNode root, StringBuilder data) {
+    private StringBuilder serialize(TreeNode root, StringBuilder data) {
         if (root == null) {
             data.append("N,");
             return data;
@@ -30,12 +35,12 @@ public class Codec {
     }
 
     // Decodes your encoded data to tree.
-    public TreeNode deserialize(String data) {
+    private TreeNode deserialize(String data) {
         List <String> dataList = new LinkedList<>(Arrays.asList(data.split(",")));
         return deserialize(dataList);
     }
 
-    public TreeNode deserialize(List <String> dataList) {
+    private TreeNode deserialize(List <String> dataList) {
         if (dataList.get(0).equals("N")) {
             dataList.remove(0);
             return null;

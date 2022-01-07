@@ -1,4 +1,4 @@
-package tree.dp;
+package tree.traverse;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -6,7 +6,12 @@ import java.util.Queue;
 
 import tree.TreeNode;
 
-public class IsCompleteTree {
+public class CompletenessOfBinaryTree {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/check-completeness-of-a-binary-tree/
+     *
+     */
     public boolean isCompleteTree(TreeNode root) {
         Queue <TreeNode> queue = new LinkedList<>();
 

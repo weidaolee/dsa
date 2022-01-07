@@ -36,7 +36,7 @@ public class IsValidBST {
         return recursiveInorderValidateBST (root.right);
     }
 
-    public boolean iterativeInorderValidateBST(TreeNode root) {
+    private boolean iterativeInorderValidateBST(TreeNode root) {
 
         Stack <TreeNode> stack = new Stack<>();
         while (!stack.isEmpty() || root != null) {

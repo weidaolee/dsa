@@ -7,6 +7,9 @@ import java.util.ArrayList;
 
 public class FindLeaves {
     /**
+     * Link:
+     * https://leetcode-cn.com/problems/find-leaves-of-binary-tree/
+     *
      * 1. post-order 走到 leaveas
      * 2. 把這一輪的 leavees 蒐集起來
      * 3. return null 使得 leaves 被釋放掉
@@ -36,7 +39,7 @@ public class FindLeaves {
         return res;
     }
 
-    public TreeNode cutLeaves(TreeNode root, List<Integer> leavesNodes) {
+    private TreeNode cutLeaves(TreeNode root, List<Integer> leavesNodes) {
         if (root == null) {
             return null;
         }

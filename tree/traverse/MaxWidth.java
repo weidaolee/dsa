@@ -1,4 +1,4 @@
-package tree.dp;
+package tree.traverse;
 import tree.*;
 
 import java.util.LinkedList;

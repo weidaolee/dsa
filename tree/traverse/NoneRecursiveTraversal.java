@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class NoneRecursiveTraversal {
 
-    public void process (TreeNode node) {}
+    private void process (TreeNode node) {}
 
     public void preOrder(TreeNode root) {
         /*

@@ -16,7 +16,7 @@ public class Morris {
      *    if x.right = null, x.right = cur
      *    if x.right = cur itself, x.right = null
      */
-    public static void morris(TreeNode root) {
+    private static void morris(TreeNode root) {
         TreeNode cur = root;
         TreeNode rightest;
         while (cur != null) {
@@ -40,7 +40,7 @@ public class Morris {
         }
     }
 
-    public static void preOrder(TreeNode root) {
+    private static void preOrder(TreeNode root) {
         /**
          * 在 morris-order 基礎上:
          *   1. 只能經過 1 次的 node, 直接 process
@@ -69,7 +69,7 @@ public class Morris {
         }
     }
 
-    public static void inOrder (TreeNode root) {
+    private static void inOrder (TreeNode root) {
         /**
          * 在 morris-order 基礎上:
          *   1. 只能經過 1 次的 node, 直接 process
@@ -99,7 +99,7 @@ public class Morris {
         }
 
     }
-    public static void postOrder (TreeNode root) {
+    private static void postOrder (TreeNode root) {
         /**
          * Mian idea:
          * 在 morris-order 基礎上:
@@ -134,7 +134,7 @@ public class Morris {
         processRightEdge(root);
     }
 
-    public static void processRightEdge (TreeNode root) {
+    private static void processRightEdge (TreeNode root) {
         if (root == null) {
             return;
         }
@@ -146,7 +146,7 @@ public class Morris {
         }
         reverseRightEdge(tail);
     }
-    public static TreeNode reverseRightEdge (TreeNode root) {
+    private static TreeNode reverseRightEdge (TreeNode root) {
         TreeNode pre = null;
         TreeNode cur = root;
         TreeNode nxt = root;
@@ -160,11 +160,11 @@ public class Morris {
         return pre;
     }
 
-    public static void process (TreeNode root) {
+    private static void process (TreeNode root) {
         System.out.println(root.val);
     }
 
-	public static void main(String[] args) {
+	 static void main(String[] args) {
 		TreeNode head = new TreeNode(4);
 		head.left = new TreeNode(2);
 		head.right = new TreeNode(6);

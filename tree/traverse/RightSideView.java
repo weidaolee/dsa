@@ -6,6 +6,11 @@ import java.util.List;
 import tree.TreeNode;
 
 public class RightSideView {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/binary-tree-right-side-view/
+     *
+     */
     public List <Integer> rightSideView (TreeNode root) {
         dfs(root, 0);
         return path;

@@ -12,7 +12,7 @@ public class InOrderTraversal {
         return list;
     }
 
-    public void recursion(TreeNode node) {
+    private void recursion(TreeNode node) {
         if (node == null) {
             return;
         }

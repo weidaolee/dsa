@@ -10,7 +10,11 @@ import java.util.PriorityQueue;
 import tree.TreeNode;
 
 public class VerticalTraversal {
-
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/vertical-order-traversal-of-a-binary-tree/
+     *
+     */
     public List <List<Integer>> verticalTraversal (TreeNode root) {
         if (root == null) {
             return null;
@@ -30,7 +34,7 @@ public class VerticalTraversal {
     }
 
     PriorityQueue <Info> queue = new PriorityQueue<>(new VerticalNodeComparator());
-    public void preOrder (TreeNode root, Info info) {
+    private void preOrder (TreeNode root, Info info) {
         if (root == null) {
             return;
         }
@@ -43,7 +47,7 @@ public class VerticalTraversal {
         }
     }
 
-    public static class Info {
+    private static class Info {
         int col;
         int row;
         int val;
@@ -55,7 +59,7 @@ public class VerticalTraversal {
 		}
     }
 
-    public static class VerticalNodeComparator implements Comparator <Info> {
+    private static class VerticalNodeComparator implements Comparator <Info> {
 		public int compare(Info o1, Info o2) {
 			if (o1.col != o2.col) {
                 return o1.col - o2.col;

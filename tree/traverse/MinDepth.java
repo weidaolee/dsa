@@ -1,15 +1,20 @@
-package tree.dp;
+package tree.traverse;
 import tree.*;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class MinDepth {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
+     *
+     */
     public int minDepth(TreeNode root) {
         return dfs(root);
     }
 
-    public int dfs(TreeNode node) {
+    private int dfs(TreeNode node) {
         if (node == null) {
             return 0;
         }
@@ -28,7 +33,7 @@ public class MinDepth {
 
     }
 
-    class QueueNode {
+    private static class QueueNode {
         TreeNode node;
         int depth;
 
@@ -38,7 +43,7 @@ public class MinDepth {
         }
     }
 
-    public int bfs(TreeNode root) {
+    private int bfs(TreeNode root) {
         if (root == null) {
             return 0;
         }

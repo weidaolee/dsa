@@ -1,4 +1,4 @@
-package linkedlist.singly;
+package list.singly;
 
 import java.util.HashMap;
 

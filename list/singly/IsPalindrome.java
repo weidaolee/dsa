@@ -1,4 +1,4 @@
-package linkedlist.singly;
+package list.singly;
 
 public class IsPalindrome {
     public boolean isPalindrome(ListNode head) {

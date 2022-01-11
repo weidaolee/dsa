@@ -1,4 +1,4 @@
-package slidingwindow;
+package monotonic.deque;
 
 import java.util.Deque;
 import java.util.LinkedList;

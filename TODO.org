@@ -1,27 +1,23 @@
-* dp
-TODO https://leetcode-cn.com/problems/delete-and-earn/
-TODO https://leetcode-cn.com/problems/can-i-win/
+* TODO skiplist
+https://leetcode-cn.com/problems/find-median-from-data-stream/
 
-* prefix
+
+* TODO dp
+https://leetcode-cn.com/problems/delete-and-earn/
+https://leetcode-cn.com/problems/can-i-win/
+
+* TODO prefix
 https://leetcode-cn.com/problems/maximum-length-of-subarray-with-positive-product/
 https://leetcode-cn.com/problems/maximum-sum-circular-subarray/
 
-* heap
-TODO real time sort
-TODO https://leetcode-cn.com/problems/find-median-from-data-stream/
-TODO https://leetcode-cn.com/problems/sliding-window-median/
+* TODO trie
+https://leetcode-cn.com/problems/concatenated-words/
 
-* trie
-TODO https://leetcode-cn.com/problems/concatenated-words/
-
-* string
-TODO https://leetcode-cn.com/problems/longest-palindromic-substring/
-TODO https://leetcode-cn.com/problems/palindromic-substrings/
-
-* slidingwindow
-https://leetcode-cn.com/problems/sliding-window-maximum/
+* TODO string
+https://leetcode-cn.com/problems/longest-palindromic-substring/
+https://leetcode-cn.com/problems/palindromic-substrings/
 
 * backtrack
 
-* tree
-TODO https://leetcode-cn.com/problems/longest-univalue-path/
+* TODO tree
+https://leetcode-cn.com/problems/longest-univalue-path/

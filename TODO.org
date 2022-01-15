@@ -1,16 +1,27 @@
 * TODO string
 https://leetcode-cn.com/problems/longest-palindromic-substring/
 https://leetcode-cn.com/problems/palindromic-substrings/
+https://leetcode-cn.com/problems/edit-distance/
 
-* TODO dp
-https://leetcode-cn.com/problems/can-i-win/
-
-* TODO heap
-https://leetcode-cn.com/problems/merge-intervals/
-https://leetcode-cn.com/problems/maximum-length-of-pair-chain/
+* TODO backtrack
+https://leetcode-cn.com/problems/word-search/
+https://leetcode-cn.com/problems/increasing-subsequences/
+https://leetcode-cn.com/problems/subsets/
+https://leetcode-cn.com/problems/subsets-ii/
+https://leetcode-cn.com/problems/unique-binary-search-trees-ii/
+https://leetcode-cn.com/problems/shopping-offers/
 
 * TODO trie
 https://leetcode-cn.com/problems/concatenated-words/
+
+* TODO unionfindset
+https://leetcode-cn.com/problems/longest-consecutive-sequence/
+
+* TODO dp
+https://leetcode-cn.com/problems/minimum-falling-path-sum/
+https://leetcode-cn.com/problems/triangle/
+https://leetcode-cn.com/problems/can-i-win/
+
 
 * TODO tree
 https://leetcode-cn.com/problems/longest-univalue-path/
@@ -18,16 +29,10 @@ https://leetcode-cn.com/problems/longest-univalue-path/
 * TODO skiplist
 https://leetcode-cn.com/problems/find-median-from-data-stream/
 
-* TODO backtrack
-https://leetcode-cn.com/problems/increasing-subsequences/
-https://leetcode-cn.com/problems/unique-binary-search-trees-ii/
-https://leetcode-cn.com/problems/word-search/
-https://leetcode-cn.com/problems/subsets/
-https://leetcode-cn.com/problems/subsets-ii/
-https://leetcode-cn.com/problems/shopping-offers/
 
-* TODO unionfindset
-https://leetcode-cn.com/problems/longest-consecutive-sequence/
+* TODO heap
+https://leetcode-cn.com/problems/merge-intervals/
+https://leetcode-cn.com/problems/maximum-length-of-pair-chain/
 
 * TODO subsequences
 https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/

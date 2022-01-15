@@ -3,7 +3,13 @@ package recursive.backtrack;
 import java.util.LinkedList;
 import java.util.List;
 
-public class PalindromePermutations {
+public class PalindromePermutationsII {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/palindrome-permutation-ii/
+     *
+     */
+
     String s;
     List <String> ans;
 
@@ -74,18 +80,6 @@ public class PalindromePermutations {
         }
     }
 
-    public void swap (int i, int j, char[] chs) {
-        char c = chs[i];
-        chs[i] = chs[j];
-        chs[j] = c;
-    }
-
-    public void init (String s) {
-        this.s = s;
-        len = s.length();
-        ans = new LinkedList<>();
-    }
-
     public void setPool() {
         pool = new int [26];
 
@@ -111,4 +105,17 @@ public class PalindromePermutations {
         odd = num <= 1 ? odd : -1;
         pool = num <= 1 ? pool : null;
     }
+
+    public void swap (int i, int j, char[] chs) {
+        char c = chs[i];
+        chs[i] = chs[j];
+        chs[j] = c;
+    }
+
+    public void init (String s) {
+        this.s = s;
+        len = s.length();
+        ans = new LinkedList<>();
+    }
+
 }

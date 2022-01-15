@@ -4,20 +4,23 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class GenerateParenthesis {
+    /**
+     * Link:
+     * https://leetcode-cn.com/problems/generate-parentheses/
+     *
+     */
+
+
     List <String> res;
     int n;
     public List<String> generateParenthesis(int n) {
-        setGenerator(n);
+        init(n);
         backtrack(new StringBuilder(), 0, 0);
         return res;
     }
 
-    public void setGenerator (int n) {
-        res = new ArrayList<>();
-        this.n = n;
-    }
-
     /**
+     * Main idea:
      * n = 3 的有效序列:
      *    1. 左 '(' 有 3 個
      *    2. 右 ')' 有 3 個
@@ -51,4 +54,10 @@ public class GenerateParenthesis {
             s.deleteCharAt(s.length() - 1);
         }
     }
+
+    public void init (int n) {
+        res = new ArrayList<>();
+        this.n = n;
+    }
+
 }

@@ -1,14 +1,5 @@
-* TODO skiplist
-https://leetcode-cn.com/problems/find-median-from-data-stream/
-
-
 * TODO dp
-https://leetcode-cn.com/problems/delete-and-earn/
 https://leetcode-cn.com/problems/can-i-win/
-
-* TODO prefix
-https://leetcode-cn.com/problems/maximum-length-of-subarray-with-positive-product/
-https://leetcode-cn.com/problems/maximum-sum-circular-subarray/
 
 * TODO trie
 https://leetcode-cn.com/problems/concatenated-words/
@@ -17,7 +8,18 @@ https://leetcode-cn.com/problems/concatenated-words/
 https://leetcode-cn.com/problems/longest-palindromic-substring/
 https://leetcode-cn.com/problems/palindromic-substrings/
 
-* backtrack
-
 * TODO tree
 https://leetcode-cn.com/problems/longest-univalue-path/
+
+* TODO skiplist
+https://leetcode-cn.com/problems/find-median-from-data-stream/
+
+* TODO backtrack
+https://leetcode-cn.com/problems/increasing-subsequences/
+https://leetcode-cn.com/problems/unique-binary-search-trees-ii/
+https://leetcode-cn.com/problems/maximum-length-of-pair-chain/
+https://leetcode-cn.com/problems/word-search/
+https://leetcode-cn.com/problems/subsets-ii/
+https://leetcode-cn.com/problems/shopping-offers/
+https://leetcode-cn.com/problems/gray-code/
+https://leetcode-cn.com/problems/beautiful-arrangement/

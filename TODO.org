@@ -1,23 +1,27 @@
 * TODO string
-+ https://leetcode-cn.com/problems/palindromic-substrings/
++ https://leetcode-cn.com/problems/zigzag-conversion/
++ https://leetcode-cn.com/problems/decode-string/
++ https://leetcode-cn.com/problems/multiply-strings/solution/
 + https://leetcode-cn.com/problems/edit-distance/
 
+
 * TODO backtrack
-+ https://leetcode-cn.com/problems/word-search/
-+ https://leetcode-cn.com/problems/increasing-subsequences/
-+ https://leetcode-cn.com/problems/subsets/
-+ https://leetcode-cn.com/problems/subsets-ii/
-+ https://leetcode-cn.com/problems/unique-binary-search-trees-ii/
++ https://leetcode-cn.com/problems/palindrome-partitioning/
++ https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/solution/javahui-su-suan-fa-tu-wen-xiang-jie-ji-b-vg5z/
 + https://leetcode-cn.com/problems/shopping-offers/
++ https://leetcode-cn.com/problems/unique-binary-search-trees-ii/
 
 * TODO trie
 + https://leetcode-cn.com/problems/concatenated-words/
++ https://leetcode-cn.com/problems/word-search-ii/solution/
 
 * TODO unionfindset
 + https://leetcode-cn.com/problems/longest-consecutive-sequence/
 
 * TODO dp
++ https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E8%83%8C%E5%8C%85-DP
 + https://leetcode-cn.com/problems/minimum-falling-path-sum/
++  https://leetcode-cn.com/problems/guess-number-higher-or-lower-ii/solution/
 + https://leetcode-cn.com/problems/triangle/
 + https://leetcode-cn.com/problems/can-i-win/
 
@@ -37,3 +41,6 @@
 + https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/
 + https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference/
 + https://leetcode-cn.com/problems/increasing-triplet-subsequence/
+
+* TODO graph
++ https://leetcode-cn.com/problems/all-paths-from-source-to-target/

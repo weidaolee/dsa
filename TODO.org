@@ -1,19 +1,20 @@
 * TODO string
-+ https://leetcode-cn.com/problems/zigzag-conversion/
 + https://leetcode-cn.com/problems/decode-string/
-+ https://leetcode-cn.com/problems/multiply-strings/solution/
++ https://leetcode-cn.com/problems/compare-version-numbers/
 + https://leetcode-cn.com/problems/edit-distance/
-
 
 * TODO backtrack
 + https://leetcode-cn.com/problems/palindrome-partitioning/
 + https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/solution/javahui-su-suan-fa-tu-wen-xiang-jie-ji-b-vg5z/
+
 + https://leetcode-cn.com/problems/shopping-offers/
 + https://leetcode-cn.com/problems/unique-binary-search-trees-ii/
 
 * TODO trie
 + https://leetcode-cn.com/problems/concatenated-words/
 + https://leetcode-cn.com/problems/word-search-ii/solution/
++ https://leetcode-cn.com/problems/largest-number/
++ https://leetcode-cn.com/problems/next-greater-element-iii/
 
 * TODO unionfindset
 + https://leetcode-cn.com/problems/longest-consecutive-sequence/
@@ -32,6 +33,8 @@
 * TODO skiplist
 + https://leetcode-cn.com/problems/find-median-from-data-stream/
 
+* TODO bigdata
++ https://leetcode-cn.com/problems/reverse-integer/
 
 * TODO heap
 + https://leetcode-cn.com/problems/merge-intervals/
